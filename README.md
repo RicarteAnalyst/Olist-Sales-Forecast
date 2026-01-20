@@ -8,12 +8,12 @@ Este projeto utiliza Machine Learning para classificar o sentimento de avaliaç�
 ### Matriz de Confusão
 A matriz abaixo demonstra a eficácia do modelo em identificar críticas reais. Com o uso de **Bigramas** e **Pesos Balanceados**, reduzimos drasticamente os falsos positivos, garantindo que frases como "não é bom" sejam classificadas corretamente.
 
-![Matriz de Confusão](matriz_confusao.png)
+![Matriz de Confusão](imag2/matriz_confusao.png)
 
 ## 💰 Análise de Faturamento Mensal
 Além do sentimento, o projeto analisa a saúde financeira através do faturamento mensal. O gráfico abaixo consolida o desempenho de vendas ao longo do período analisado.
 
-![Gráfico de Faturamento](faturamento_mensal.png)
+![Gráfico de Faturamento](imag2/faturamento_mensal.png)
 
 ## 🛠️ Evolução Técnica (V1 vs V2)
 * **Acurácia:** Elevada de 47% para **93.85%**.
