@@ -1,22 +1,45 @@
-Este projeto realiza uma análise de séries temporais para prever o faturamento da categoria **'cool_stuff'** utilizando dados reais da plataforma Olist.
+# Análise de Sentimentos e Performance Olist - Versão 2.0
 
-## 📊 Visualização do Modelo Final
-Aqui vemos o ajuste da Regressão Polinomial (verde) sobre os dados históricos e a projeção para os próximos 30 dias (vermelho):
+## 📝 Descrição do Projeto
+Este projeto utiliza Machine Learning para classificar o sentimento de avaliações de clientes e analisar tendências de faturamento da Olist. A versão 2.0 foca na correção de vieses lógicos e na entrega de métricas visuais precisas para tomada de decisão.
 
-![Tendência e Previsão de Faturamento](imgs/Análise%20Final.png)
+## 📊 Performance do Modelo
 
-## 🎯 Destaques do Projeto
-* **Engenharia de Dados**: Agrupamento por faturamento diário e tratamento de séries temporais.
-* **Otimização de Modelo**: Comparação entre Regressão Linear e Polinomial.
-* **Acurácia (R²)**: O modelo polinomial atingiu **0.47**, superando a base linear (0.42).
+### Matriz de Confusão
+A matriz abaixo demonstra a eficácia do modelo em identificar críticas reais. Com o uso de **Bigramas** e **Pesos Balanceados**, reduzimos drasticamente os falsos positivos, garantindo que frases como "não é bom" sejam classificadas corretamente.
 
-## 🔍 Principais Insights
-1. **Curva de Maturação**: O gráfico mostra um platô inicial (2016) seguido por uma aceleração consistente em 2017.
-2. **Sazonalidade**: Identificamos picos extremos de venda, como o registrado na Black Friday de Novembro de 2017.
-3. **Tendência**: A categoria apresenta crescimento sólido, com projeção positiva para o próximo mês.
+![Matriz de Confusão](matriz_confusao.png)
 
-## 🧰 Tecnologias Utilizadas
-* Python
-* Pandas
-* Scikit-Learn
-* Matplotlib (Visualização de Dados)
+## 💰 Análise de Faturamento Mensal
+Além do sentimento, o projeto analisa a saúde financeira através do faturamento mensal. O gráfico abaixo consolida o desempenho de vendas ao longo do período analisado.
+
+![Gráfico de Faturamento](faturamento_mensal.png)
+
+## 🛠️ Evolução Técnica (V1 vs V2)
+* **Acurácia:** Elevada de 47% para **93.85%**.
+* **Tratamento de Contexto:** Implementação de `ngram_range=(1, 2)` para leitura de frases negativas compostas.
+* **Equilíbrio de Dados:** Uso de `class_weight='balanced'` para compensar a base majoritariamente positiva.
+* **Persistência:** Modelo e vetorizador serializados em arquivos `.pkl` para uso em produção.
+
+## 📂 Estrutura
+* `01_Carregamento_Limpeza.ipynb`: Tratamento da base original.
+* `02_Analise_Exploratória.ipynb`: Investigação de métricas de negócio, tendências de faturamento e insights sobre o comportamento de compra.
+* `03_Classificacao.ipynb`: Treino e métricas do modelo.
+* `04_Aplicacao.ipynb`: Simulador interativo de sentimentos.
+
+
+
+# Tecnologias Utilizadas
+Python
+
+Pandas / Scikit-Learn
+
+NLTK (Natural Language Toolkit)
+
+Joblib (Persistência de modelos)
+
+Matplotlib / Seaborn
+
+Status: Concluído
+
+---
