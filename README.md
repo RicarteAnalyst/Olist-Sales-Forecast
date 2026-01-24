@@ -32,13 +32,15 @@ Análise de Pareto: Identificação de que a categoria Esporte Lazer lidera o fa
 
 Visão Temporal: Implementação de segmentação de dados para análise dinâmica de performance por períodos específicos.
 
+
+<img width="1163" height="657" alt="image" src="https://github.com/user-attachments/assets/8a577fba-74af-413a-86a2-b9b26e49a93f" />
+
+
 ## 📂 Estrutura
 * `01_Carregamento_Limpeza.ipynb`: Tratamento da base original.
 * `02_Analise_Exploratória.ipynb`: Investigação de métricas de negócio, tendências de faturamento e insights sobre o comportamento de compra.
 * `03_Classificacao.ipynb`: Treino e métricas do modelo.
 * `04_Aplicacao.ipynb`: Simulador interativo de sentimentos.
-
-<img width="1163" height="657" alt="image" src="https://github.com/user-attachments/assets/8a577fba-74af-413a-86a2-b9b26e49a93f" />
 
 
 # Tecnologias Utilizadas
