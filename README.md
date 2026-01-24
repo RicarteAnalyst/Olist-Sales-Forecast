@@ -21,12 +21,24 @@ Além do sentimento, o projeto analisa a saúde financeira através do faturamen
 * **Equilíbrio de Dados:** Uso de `class_weight='balanced'` para compensar a base majoritariamente positiva.
 * **Persistência:** Modelo e vetorizador serializados em arquivos `.pkl` para uso em produção.
 
+
+
+📈 Business Intelligence & ETL (Power BI)
+Para transformar as predições do modelo em estratégia comercial, desenvolvi um dashboard interativo integrado aos dados processados:
+
+Tratamento de Dados (ETL): Limpeza e padronização de categorias via Power Query, removendo ruídos de nomenclatura para melhor leitura executiva.
+
+Análise de Pareto: Identificação de que a categoria Esporte Lazer lidera o faturamento com 130 Mil, seguida por Relógios Presentes.
+
+Visão Temporal: Implementação de segmentação de dados para análise dinâmica de performance por períodos específicos.
+
 ## 📂 Estrutura
 * `01_Carregamento_Limpeza.ipynb`: Tratamento da base original.
 * `02_Analise_Exploratória.ipynb`: Investigação de métricas de negócio, tendências de faturamento e insights sobre o comportamento de compra.
 * `03_Classificacao.ipynb`: Treino e métricas do modelo.
 * `04_Aplicacao.ipynb`: Simulador interativo de sentimentos.
 
+<img width="1163" height="657" alt="image" src="https://github.com/user-attachments/assets/8a577fba-74af-413a-86a2-b9b26e49a93f" />
 
 
 # Tecnologias Utilizadas
@@ -39,6 +51,8 @@ NLTK (Natural Language Toolkit)
 Joblib (Persistência de modelos)
 
 Matplotlib / Seaborn
+
+Power BI
 
 Status: Concluído
 
